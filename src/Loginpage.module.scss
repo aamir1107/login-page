@@ -1,0 +1,146 @@
+html {
+    height: 100vh;
+    width: 100vw;
+
+}
+
+
+body {
+    background-image: linear-gradient(136deg, #e59638 50%, #25242c 30%);
+    background-size: cover;
+    margin: 0;
+    padding: 20px;
+
+    .loginMainPage {
+        margin: auto;
+        border-radius: 3.5rem;
+        border: 10px solid white;
+        height: 37.5rem;
+        width: 25rem;
+        padding-left: 1rem;
+        padding-right: 1rem;
+
+
+        .imageSection {
+            border: 8px solid white;
+            height: 10rem;
+            width: 10rem;
+            border-radius: 50%;
+            margin: auto;
+            margin-top: 1rem;
+        }
+
+        .tittleSection {
+            text-transform: uppercase;
+            text-shadow: 2px 2px 8px #25242c;
+            font-size: 2rem;
+
+            padding-top: 2rem;
+            font-weight: bolder;
+            color: white;
+        }
+
+        .emailInputSection {
+            margin-top: 1.3rem;
+
+
+
+            .activeIcon {
+                color: white;
+            }
+
+            .inactiveIcon {
+                color: #e59638;
+            }
+
+
+            input {
+
+                color: white;
+            }
+
+            label {
+                color: white;
+            }
+
+
+        }
+
+        .passwordInputSection {
+            margin-top: 1rem;
+
+
+            .activeIcon {
+                color: white;
+            }
+
+            .inactiveIcon {
+                color: #e59638;
+            }
+
+            input {
+
+                color: white;
+            }
+
+            label {
+                color: white;
+            }
+
+
+
+        }
+
+        .passwordForgetSection {
+            align-items: flex-end;
+
+            Button {
+                padding-top: 0.7rem;
+                color: #e59638;
+                font-size: 12px;
+                padding-left: 15.6rem;
+                background: none;
+            }
+
+            button:hover {
+                color: white;
+            }
+        }
+
+        .btnSection {
+            margin-top: 2.5rem;
+            display: flex;
+            justify-content: space-between;
+
+            .signUpBtn {
+                button {
+                    width: 8.75rem;
+                    color: #e59638;
+                    border-radius: 50px;
+                }
+
+                button:hover {
+                    color: white;
+                    background-color: #e59638;
+                }
+
+            }
+
+            .loginBtn {
+                button {
+                    width: 8.75rem;
+                    color: #e59638;
+                    border-radius: 50px;
+                }
+
+                button:hover {
+                    color: white;
+                    background-color: #e59638;
+
+
+                }
+            }
+
+        }
+    }
+}
