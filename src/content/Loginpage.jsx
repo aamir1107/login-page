@@ -1,39 +1,82 @@
 import { React, useState } from 'react'
 import classes from './Loginpage.module.scss'
-import { TextField, Button, InputAdornment, endAdornment } from '@mui/material';
+import { TextField, Button, InputAdornment, endAdornment, Alert } from '@mui/material';
 import PersonIcon from '@mui/icons-material/Person';
 import VpnKeyOffIcon from '@mui/icons-material/VpnKeyOff';
+import logoAa from '../image/logoAa.jpg'
+
 
 
 
 function LoginPage() {
 
     const [focus, setFocus] = useState("")
+    const [emailInput, setEmailInput] = useState("")
+    const [passwordVal, setPassword] = useState("")
+
+
+
+    const handleEmailChange = (e) => {
+        setEmailInput(e.target.value)
+    }
+
+    const validateEmails = () => {
+        const emailRegex = /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i;
+        if (!emailInput.match(emailRegex)) {
+            alert("Please Enter Valid Email")
+        }
+
+    }
+
+    const handlePasswordChange = (e) => {
+        setPassword(e.target.value)
+
+    }
+
+    const validatePassword = () => {
+        if (passwordVal !== "") {
+
+        } else {
+            alert("Enter Password")
+        }
+    }
 
 
 
 
-    const IconTextField = ({ iconEnd, InputProps, onFocus, onBlur, focusComponent, ...props }) => {
-        return (
-            <TextField
-                {...props}
-                onFocus={onFocus}
-                onBlur={onBlur}
-                InputProps={{
-                    endAdornment: iconEnd ? (
-                        <InputAdornment className={focus === focusComponent ? classes.activeIcon : classes.inactiveIcon} position="end">{iconEnd}</InputAdornment>
-                    ) : null
-                }}
-            />
-        );
-    };
+    const submitData = () => {
+        validateEmails()
+        validatePassword()
+        setEmailInput("")
+        setPassword("")
+
+
+    }
+
+
+
+
+    // const IconTextField = ({ iconEnd, InputProps, onFocus, onBlur, focusComponent, ...props }) => {
+    //     return (
+    //         <TextField
+    //             {...props}
+    //             onFocus={onFocus}
+    //             onBlur={onBlur}
+    //             InputProps={{
+    //                 endAdornment: iconEnd ? (
+    //                     <InputAdornment className={focus === focusComponent ? classes.activeIcon : classes.inactiveIcon} position="end">{iconEnd}</InputAdornment>
+    //                 ) : null
+    //             }}
+    //         />
+    //     );
+    // };
 
 
     return (
         <div className={classes.loginMainPage}>
 
             <div className={classes.imageSection}>
-                <img src="" alt="" />
+                <img className={classes.logo} src={logoAa} alt="img" />
             </div>
 
             <div className={classes.tittleSection}>
@@ -46,6 +89,8 @@ function LoginPage() {
                     sx={{ width: " 24rem", }}
                     label="Email"
                     type={'email'}
+                    onChange={handleEmailChange}
+                    value={emailInput}
                     onFocus={() => {
                         setFocus("email")
                     }}
@@ -56,6 +101,7 @@ function LoginPage() {
                         )
                     }}
                 />
+
             </div>
 
 
@@ -65,6 +111,8 @@ function LoginPage() {
                     sx={{ width: " 24rem", }}
                     label="Password"
                     type={'password'}
+                    onChange={handlePasswordChange}
+                    value={passwordVal}
                     onFocus={() => {
                         setFocus("Password")
                     }}
@@ -87,7 +135,7 @@ function LoginPage() {
                     <Button >SignUp</Button>
                 </div>
                 <div className={classes.loginBtn}>
-                    <Button >Log In</Button>
+                    <Button onClick={submitData}  >Log In</Button>
 
 
                 </div>
@@ -97,4 +145,5 @@ function LoginPage() {
         </div >
     )
 }
+
 export default LoginPage;
