@@ -1,5 +1,5 @@
 html {
-    height: 100vh;
+    height: 100%;
     width: 100vw;
 
 }
@@ -15,7 +15,7 @@ body {
         margin: auto;
         border-radius: 3.5rem;
         border: 10px solid white;
-        height: 37.5rem;
+        height: 37rem;
         width: 25rem;
         padding-left: 1rem;
         padding-right: 1rem;
@@ -28,6 +28,13 @@ body {
             border-radius: 50%;
             margin: auto;
             margin-top: 1rem;
+            overflow: hidden;
+
+
+            .logo {
+                height: 10rem;
+                width: 10rem;
+            }
         }
 
         .tittleSection {
