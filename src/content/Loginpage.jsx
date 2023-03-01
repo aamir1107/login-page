@@ -4,12 +4,11 @@ import { TextField, Button, InputAdornment, endAdornment, Alert } from '@mui/mat
 import PersonIcon from '@mui/icons-material/Person';
 import VpnKeyOffIcon from '@mui/icons-material/VpnKeyOff';
 import logoAa from '../image/logoAa.jpg'
-
-
+import { useNavigate } from 'react-router-dom';
 
 
 function LoginPage() {
-
+    const navigate = useNavigate();
     const [focus, setFocus] = useState("")
     const [emailInput, setEmailInput] = useState("")
     const [passwordVal, setPassword] = useState("")
@@ -70,6 +69,11 @@ function LoginPage() {
     //         />
     //     );
     // };
+
+    const routeToSignup = () => {
+        navigate('sign-in-page');
+        // window.history.pushState('', "", "/sign-in-page")
+    }
 
 
     return (
@@ -132,7 +136,7 @@ function LoginPage() {
 
             <div className={classes.btnSection}>
                 <div className={classes.signUpBtn}>
-                    <Button >SignUp</Button>
+                    <Button onClick={routeToSignup}>SignUp</Button>
                 </div>
                 <div className={classes.loginBtn}>
                     <Button onClick={submitData}  >Log In</Button>
