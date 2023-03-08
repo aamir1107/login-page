@@ -1,6 +1,6 @@
 import { React, useState } from 'react'
 import classes from './Loginpage.module.scss'
-import { TextField, Button, InputAdornment, endAdornment, Alert } from '@mui/material';
+import { TextField, Button, InputAdornment } from '@mui/material';
 import PersonIcon from '@mui/icons-material/Person';
 import VpnKeyOffIcon from '@mui/icons-material/VpnKeyOff';
 import logoAa from '../image/logoAa.jpg'
@@ -53,26 +53,9 @@ function LoginPage() {
     }
 
 
-
-
-    // const IconTextField = ({ iconEnd, InputProps, onFocus, onBlur, focusComponent, ...props }) => {
-    //     return (
-    //         <TextField
-    //             {...props}
-    //             onFocus={onFocus}
-    //             onBlur={onBlur}
-    //             InputProps={{
-    //                 endAdornment: iconEnd ? (
-    //                     <InputAdornment className={focus === focusComponent ? classes.activeIcon : classes.inactiveIcon} position="end">{iconEnd}</InputAdornment>
-    //                 ) : null
-    //             }}
-    //         />
-    //     );
-    // };
-
     const routeToSignup = () => {
         navigate('sign-in-page');
-        // window.history.pushState('', "", "/sign-in-page")
+
     }
 
 
@@ -84,13 +67,14 @@ function LoginPage() {
             </div>
 
             <div className={classes.tittleSection}>
-                welcome  <br></br>
-                back !
+                <p> welcome  <br></br>
+                    back !
+                </p>
             </div>
 
             <div className={classes.emailInputSection}>
                 <TextField
-                    sx={{ width: " 24rem", }}
+                    sx={{ width: " 24rem" }}
                     label="Email"
                     type={'email'}
                     onChange={handleEmailChange}

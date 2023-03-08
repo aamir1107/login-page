@@ -12,4 +12,170 @@ body {
     padding: 20px;
 
 
+    .signInPage {
+        margin: auto;
+        border-radius: 3.5rem;
+        border: 10px solid white;
+        height: 37rem;
+        width: 27rem;
+        text-align: center;
+
+
+
+        .headigSection {
+            font-size: 20px;
+            color: white;
+            font-family: cursive;
+            font-weight: bolder;
+            color: white;
+            text-shadow: 4px 4px 4px #000000;
+
+            p:hover {
+                color: black;
+            }
+
+        }
+
+        .firstNameInputSection {
+            margin-top: 1.5rem;
+
+            label {
+                color: white;
+            }
+
+
+            .activeIcon {
+                color: white;
+
+            }
+
+            .inactiveIcon {
+                color: black;
+            }
+
+        }
+
+
+        .lastNamInputSection {
+            margin-top: 1rem;
+
+            label {
+                color: white;
+            }
+
+
+            .activeIcon {
+                color: white;
+
+            }
+
+            .inactiveIcon {
+                color: black;
+            }
+
+
+        }
+
+        .phoneNumbeInputSection {
+            margin-top: 1rem;
+
+            label {
+                color: white;
+            }
+
+            .activeIcon {
+                color: white;
+
+            }
+
+            .inactiveIcon {
+                color: black;
+            }
+
+
+        }
+
+        .emailInputSection {
+            margin-top: 1rem;
+
+            label {
+                color: white;
+            }
+
+            .activeIcon {
+                color: white;
+
+            }
+
+            .inactiveIcon {
+                color: black;
+            }
+
+        }
+
+
+        .passwordInputSection {
+            margin-top: 1rem;
+
+            label {
+                color: white;
+            }
+
+
+
+            .activeIcon {
+                color: white;
+
+            }
+
+            .inactiveIcon {
+                color: black;
+            }
+
+        }
+
+        .reEnterPasswordSection {
+            margin-top: 1rem;
+
+            label {
+                color: white;
+            }
+
+            .activeIcon {
+                color: white;
+
+            }
+
+            .inactiveIcon {
+                color: black;
+            }
+
+        }
+
+        .submitButtonSection {
+            margin-top: 1rem;
+
+            button:hover {
+                color: black;
+                background-color: #e59638;
+            }
+
+            button {
+                height: 3.25em;
+
+
+
+                .activeIcon {
+                    color: white;
+
+                }
+
+                .inactiveIcon {
+                    color: black;
+                }
+
+            }
+
+        }
+    }
 }
