@@ -1,9 +1,11 @@
-import LoginPage from './Loginpage.jsx'
+
+import RoutePage from './RoutePage'
 
 
 function App() {
   return (
-    <LoginPage />
+    <RoutePage />
+
   )
 }
 

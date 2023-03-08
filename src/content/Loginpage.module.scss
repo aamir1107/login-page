@@ -38,17 +38,26 @@ body {
         }
 
         .tittleSection {
-            text-transform: uppercase;
-            text-shadow: 2px 2px 8px #25242c;
-            font-size: 2rem;
+            p:hover {
+                color: black;
+            }
 
-            padding-top: 2rem;
-            font-weight: bolder;
-            color: white;
+            p {
+                text-transform: uppercase;
+                text-shadow: 2px 2px 8px #25242c;
+                font-size: 2rem;
+                width: 10.625rem;
+
+                font-weight: bolder;
+                color: white;
+                color: white;
+                text-shadow: 4px 4px 4px #000000;
+            }
         }
 
         .emailInputSection {
             margin-top: 1.3rem;
+
 
 
 
@@ -64,6 +73,7 @@ body {
             input {
 
                 color: white;
+
             }
 
             label {
